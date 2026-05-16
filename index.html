@@ -1,0 +1,346 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  background-color: #fde8d0;
+  font-family: 'Nunito', sans-serif;
+  color: #3d2b1f;
+}
+
+.dots-bg {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: radial-gradient(circle, #e8a07040 1.2px, transparent 1.2px);
+  background-size: 28px 28px;
+  opacity: 0.55;
+}
+
+.page {
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 56px 28px 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.header-name {
+  font-family: 'Nunito', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #b07040;
+  margin-bottom: 16px;
+  opacity: 0.8;
+}
+
+.header-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px;
+  font-weight: 300;
+  font-style: italic;
+  color: #3d2b1f;
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+}
+
+.header-title em {
+  font-style: normal;
+  font-weight: 400;
+  color: #b05c30;
+}
+
+.line-deco {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 260px;
+}
+.line-deco-bar { flex: 1; height: 0.5px; background: #c8845040; }
+.line-deco-circle { width: 5px; height: 5px; border-radius: 50%; background: #c88450; opacity: 0.6; }
+
+.section {
+  background: rgba(255, 248, 240, 0.72);
+  border: 0.5px solid rgba(200, 130, 80, 0.2);
+  border-radius: 18px;
+  padding: 30px 28px;
+  margin-bottom: 28px;
+}
+
+.section-eyebrow {
+  font-family: 'Nunito', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #c07040;
+  margin-bottom: 10px;
+}
+
+.section-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 400;
+  font-style: italic;
+  color: #3d2b1f;
+  margin-bottom: 20px;
+  line-height: 1.25;
+}
+
+.body-text {
+  font-family: 'Nunito', sans-serif;
+  font-size: 15.5px;
+  font-weight: 300;
+  line-height: 1.9;
+  color: #4a3428;
+  margin-bottom: 14px;
+}
+
+.body-text:last-child { margin-bottom: 0; }
+
+.body-text em {
+  font-style: italic;
+  color: #a05030;
+  font-weight: 400;
+}
+
+.closing-line {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 300;
+  color: #a05030;
+  border-left: 2px solid #e0a07080;
+  padding-left: 16px;
+  margin-top: 18px;
+  line-height: 1.7;
+}
+
+.wishlist {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-top: 22px;
+}
+
+.wish-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255,255,255,0.6);
+  border: 0.5px solid rgba(200,130,80,0.18);
+  border-radius: 12px;
+  padding: 11px 16px;
+}
+
+.wish-icon { font-size: 20px; flex-shrink: 0; width: 30px; text-align: center; }
+
+.wish-name {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #3d2b1f;
+}
+
+.intent-line {
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 19px;
+  font-weight: 300;
+  color: #b06030;
+  margin: 16px 0 10px;
+  letter-spacing: 0.5px;
+}
+
+.alias-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.75);
+  border: 0.5px solid rgba(200,130,80,0.3);
+  border-radius: 12px;
+  padding: 12px 20px;
+  margin-top: 18px;
+}
+
+.alias-label {
+  font-family: 'Nunito', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #a07050;
+}
+
+.alias-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-style: italic;
+  color: #7a3e20;
+  font-weight: 400;
+}
+
+.dreams-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin-top: 20px;
+}
+
+.dream-item {
+  display: flex;
+  gap: 13px;
+  align-items: flex-start;
+}
+
+.dream-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 8px;
+  opacity: 0.7;
+}
+
+.dream-text {
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #4a3428;
+}
+
+.cierre {
+  text-align: center;
+  padding: 28px 16px 12px;
+  background: transparent;
+  border: none;
+}
+
+.cierre-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 300;
+  font-style: italic;
+  color: #3d2b1f;
+  line-height: 1.6;
+}
+
+.cierre-firma {
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: #a07060;
+  margin-top: 14px;
+  letter-spacing: 0.5px;
+}
+</style>
+
+<div class="dots-bg"></div>
+
+<div class="page">
+
+  <header class="header">
+    <div class="header-name">una página de</div>
+    <h1 class="header-title">Permitir que se cumplan los sueños,<br>animarse a <em>ser</em></h1>
+    <div class="line-deco">
+      <div class="line-deco-bar"></div>
+      <div class="line-deco-circle"></div>
+      <div class="line-deco-bar"></div>
+    </div>
+  </header>
+
+  <div class="section">
+    <div class="section-eyebrow">🌿 antes de empezar</div>
+    <h2 class="section-heading">por qué una lista de deseos</h2>
+
+    <p class="body-text">Poner en palabras lo que uno desea, traerlo a la consciencia, tenerlo presente... hace que se cumpla más rápido. Compartirlo con otras personas nutre el deseo.</p>
+
+    <p class="body-text">El año pasado logré cumplir uno que creía imposible, ir a la selva amazónica, y lo hice empezando desde esta primera base: <em>confiar en mi deseo y en mí.</em> Confiar en que puedo lograrlo. Confiar en la vida, que me va a sostener, que se va a acomodar, que yo me voy a alinear a lo que deseo.</p>
+
+    <p class="body-text">En el medio, entre que surge el deseo y se cumple, están todos los desafíos — esos que nos confrontan y nos alinean. Si nos mantenemos en la confianza de que todo nos está llevando hacia ese lugar, si permanecemos abiertos a cómo las cosas pueden suceder (nunca sabemos exactamente cómo va a ocurrir lo que queremos, y eso está bien), entregándonos y confiando... llegamos. <em>Realmente lo creo.</em></p>
+
+    <p class="body-text">Mi desafío para alinearme con mis deseos es en este momento exponerme y compartir desde mí;</p>
+
+    <div class="closing-line">Eso es lo que estoy haciendo hoy</div>
+  </div>
+
+  <div class="section">
+    <div class="section-eyebrow">🎁 para mi cumple</div>
+    <h2 class="section-heading">cosas que deseo, como una niña</h2>
+
+    <p class="body-text">En este momento de mi vida siento el llamado a exponerme más, a animarme a ser vista, a abrirme a la abundancia. El mes que viene es mi cumpleaños y quiero compartir con todos algunas cosas tangibles, cosas que deseo, sabiendo que mi felicidad no depende de ellas, pero eligiendo animarme a desear, a pedir.</p>
+
+    <div class="intent-line">100% intención · 0% expectativa</div>
+
+    <p class="body-text" style="text-align:center; font-size:14.5px;">Si alguien siente el deseo de regalarme algo, lo recibo con los brazos bien abiertos 🤍</p>
+
+    <div class="wishlist">
+      <div class="wish-item"><span class="wish-icon">🧂</span><span class="wish-name">Lámpara de sal</span></div>
+      <div class="wish-item"><span class="wish-icon">📓</span><span class="wish-name">Cuaderno / anotador</span></div>
+      <div class="wish-item"><span class="wish-icon">🪨</span><span class="wish-name">Piedra de alumbre</span></div>
+      <div class="wish-item"><span class="wish-icon">✨</span><span class="wish-name">Biromes con brillitos</span></div>
+      <div class="wish-item"><span class="wish-icon">🧦</span><span class="wish-name">Medias abrigadas</span></div>
+      <div class="wish-item"><span class="wish-icon">🖍️</span><span class="wish-name">Tizas de colores (flúor mejor)</span></div>
+    </div>
+
+    <div class="alias-box">
+      <span class="alias-label">Mercado Pago</span>
+      <span class="alias-value">Volverarecordarnos</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-eyebrow">🌌 deseos en el horizonte</div>
+    <h2 class="section-heading">Deseos en el horizonte</h2>
+
+    <p class="body-text">Todos tenemos un inmenso poder creador, todos vinimos a vivir esta experiencia humana para crear, para exponer en el mundo más de nuestra verdadera esencia. Para ser de verdad.</p>
+
+    <p class="body-text">Si tan solo confiáramos un poco más en nosotros, si le diéramos un lugar en nuestra casa a nuestros sueños más grandes, más infantiles, más ridículos.</p>
+
+    <p class="body-text">Esta página es eso, el apoyo que quiero darle a mis propios sueños, una página en honor a mis deseos.</p>
+
+    <div class="dreams-list">
+      <div class="dream-item">
+        <div class="dream-dot" style="background:#6080c0"></div>
+        <div class="dream-text">Ver <strong style="font-weight:500">auroras boreales</strong> en un país que haga mucho frío — ese sueño que brilla desde siempre.</div>
+      </div>
+      <div class="dream-item">
+        <div class="dream-dot" style="background:#8a6840"></div>
+        <div class="dream-text">Un campo donde pueda <strong style="font-weight:500">andar con caballos</strong>, aprender de ellos, galopar todos juntos.</div>
+      </div>
+      <div class="dream-item">
+        <div class="dream-dot" style="background:#3090a0"></div>
+        <div class="dream-text"><strong style="font-weight:500">Nadar con delfines</strong> en mar abierto y hacer kayak cerca de ballenas.</div>
+      </div>
+      <div class="dream-item">
+        <div class="dream-dot" style="background:#5a8050"></div>
+        <div class="dream-text">Vivir rodeada de <strong style="font-weight:500">naturaleza</strong>, de personas más conscientes, en mayor conexión con la tierra y conmigo misma.</div>
+      </div>
+      <div class="dream-item">
+        <div class="dream-dot" style="background:#a05030"></div>
+        <div class="dream-text">Volver a la <strong style="font-weight:500">selva amazónica</strong> — el año pasado lo logré y este año siento el llamado de ir nuevamente. Si quieren, se pueden sumar, boraaaa 🌿</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section cierre">
+    <p class="cierre-text">"Pisemos fuerte en la vida, confiando y moldeando nuestros sueños, moldeándonos para ser quienes viven ese sueño.</p>
+    <p class="cierre-text" style="margin-top:10px">Viviendo el presente con alegría, creando un futuro en sintonía." 🌿</p>
+    <p class="cierre-firma">— con amor, para vos que llegaste hasta acá ✨</p>
+  </div>
+
+</div>
